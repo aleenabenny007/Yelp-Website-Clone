@@ -117,7 +117,7 @@ header>div {
 header ul {
     display: flex;
     column-gap: 12px;
-    margin-left: 55px !important;
+    margin-left: 56px !important;
     align-items: center;
 }
 
@@ -138,7 +138,7 @@ header .square-button.transparent {
     margin-right: 4px;
     display: flex;
     column-gap: 4px;
-    margin-top: -2px;
+    margin-top: 0px;
 }
 
 .square-button.outlined,
@@ -167,7 +167,7 @@ header .square-button.red {
     background-color: white;
     min-width: 320px;
     width: 100%;
-    max-width: 958px;
+    max-width: 49.85vw;
     height: 48px;
     display: flex;
     border-radius: 4px;
@@ -191,7 +191,6 @@ header .square-button.red {
 
 .search-bar>input:not(:first-child) {
     border-left: 2px solid #ebebeb;
-    margin-left: -3px;
     padding-left: 15px;
     color: #2d2e2f;
 }
@@ -208,21 +207,31 @@ header .square-button.red {
     margin-top: 2px;
 }
 
+.dropdown-section{
+    display: flex;
+    min-width:676px;
+    width: 100%;
+    justify-content: flex-end;
+    position: absolute;
+    top: 89px;
+    z-index: 10;
+}
+
+.dropdown-spacer{
+    width: 568px;
+}
+
 .dropdowns {
     color: white;
     display: flex;
     column-gap: 32px;
-    padding-left: 13px;
-    min-width: max-content;
-    position: absolute;
-    top: 89px;
-    margin-left: 155px;
-    justify-content: flex-end;
-    width: 100%;
     box-sizing: border-box;
-    padding-right: 1175px;
-    /* padding-right: 61.2vw; */
-    z-index: 10;
+    align-self: flex-end;
+    flex: 1;
+    margin-left: 168px !important;
+    min-width: max-content;
+    width: 100%;
+    max-width: 49.85vw;
 }
 
 .dropdowns>li {
@@ -255,10 +264,13 @@ header .square-button.red {
 
 .banner-divs {
     display: flex;
+    min-width: 610px;
     width: 100vw;
     z-index: 10;
     position: absolute;
     top: 194px;
+    justify-content: flex-end;
+    /* background-color: #e00707; */
 }
 
 .banner-divs * {
@@ -267,17 +279,21 @@ header .square-button.red {
 
 
 .spacer-div {
-    min-width: 40px;
-    width: 100%;
-    max-width: 395px;
+    width: 568px;
+    /* background-color: #027a97; */
 }
 
 .banner-content {
     display: flex;
     flex-flow: column;
     row-gap: 96px;
+
+    flex: 1;
+    min-width: max-content;
     width: 100%;
-    padding-right: 930px;
+    max-width: 49.85vw;
+    padding-left: 32px !important;
+    /* background-color: #6e7072; */
 }
 
 .banner-content-top {
@@ -320,7 +336,9 @@ header .square-button.red {
     font-weight: 500;
     color: white;
     margin-top: 8px;
-    min-width: 500px;
+    width: 100%;
+    max-width: 500px;
+    /* background-color: #027a97; */
 }
 
 .banner-content-top>div p {
@@ -417,7 +435,7 @@ main .activities {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1138px;
     box-sizing: border-box;
     margin: 0 30px;
 }
@@ -434,9 +452,9 @@ main .activities img {
 }
 
 .card .card-header {
-    padding: 15px 0;
+    padding: 16px 0;
     display: flex;
-    column-gap: 10px;
+    column-gap: 8px;
 }
 
 .card .card-header h1 {
@@ -463,11 +481,11 @@ main .activities img {
 
 .card .card-header img {
     border-radius: 50%;
-    height: 38px;
+    height: 40px;
 }
 
 .card .card-body {
-    padding: 15px 0;
+    padding: 16px 0;
     border-bottom: 1px solid #ebebeb;
     display: flex;
     flex-flow: column;
@@ -596,11 +614,11 @@ main .activities img {
 
 /* categories  */
 main .categories {
-    padding: 40px 30px 47px 30px;
+    padding: 40px 0px 48px 0px;
     display: grid;
     place-items: center;
     width: 100%;
-    max-width: 1145px;
+    max-width: 1144px;
 }
 
 .categories * {
@@ -616,7 +634,7 @@ main .categories {
 .categories>ul {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 42px;
+    column-gap: 40px;
     row-gap: 40px;
     width: 100%;
 }
@@ -625,12 +643,15 @@ main .categories {
     display: grid;
     row-gap: 20px;
     place-items: center;
+    /* text-align:justify; */
     border: 1px solid #e3e3e3;
     border-radius: 5px;
-    padding: 48px 0 50px 0;
+    padding: 48px 0 49px 0;
+    /* margin: 0 20px; */
     min-width: 0px;
     width: 100%;
     cursor: pointer;
+    box-sizing: border-box;
 }
 
 .categories>ul>li:hover {
@@ -642,7 +663,7 @@ main .categories {
 /* footer starts  */
 footer{
     background-color: #f7f7f7;
-    padding: 59px 30px 58px 30px;
+    padding: 59px 30px 58px 31px;
     display: flex;
     flex-flow: column;
     row-gap: 56px;
