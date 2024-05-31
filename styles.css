@@ -97,7 +97,7 @@ header {
     align-items: flex-start;
     padding: 24px 40px;
     z-index: 10;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.714), rgba(0, 0, 0, 0.581), transparent);
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.624), rgba(0, 0, 0, 0.491),rgba(0, 0, 0, 0.206),rgba(0, 0, 0, 0.096), transparent);
 }
 
 header>img {
@@ -163,6 +163,10 @@ header .square-button.red {
     padding: 10px 16px;
 }
 
+.search-bar-small{
+    display: none;
+}
+
 .search-bar {
     background-color: white;
     min-width: 320px;
@@ -177,7 +181,7 @@ header .square-button.red {
     margin-left: 112px !important;
 }
 
-.search-bar>input {
+.search-bar>input, .search-bar-small input {
     flex: 1;
     padding: 0 16px;
     border: none;
@@ -185,11 +189,11 @@ header .square-button.red {
     line-height: 20px;
     letter-spacing: 0px;
     font-weight: 400;
-    color: #939394;
+    color: rgba(0, 0, 0, 0.599);
     min-width: 0px;
 }
 
-.search-bar>input:not(:first-child) {
+.search-bar>input:not(:first-child),.search-bar-small input:not(:first-child) {
     border-left: 2px solid #ebebeb;
     padding-left: 15px;
     color: #2d2e2f;
@@ -252,14 +256,15 @@ header .square-button.red {
     width: 100%;
     height: 682px;
     overflow: hidden;
+    background-image: url("https://s3-media0.fl.yelpcdn.com/educatorphoto/k0oFer3y9EnL-Id0DONTQg/o.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
-.banner img {
-    object-fit: cover;
+.banner-gradient{  
     width: 100%;
     height: 100%;
-    filter: grayscale(0.3);
-    opacity: 0.85;
+    background-image: linear-gradient(90deg,#0006,#0000001a 55%);
 }
 
 .banner-divs {
@@ -270,7 +275,6 @@ header .square-button.red {
     position: absolute;
     top: 194px;
     justify-content: flex-end;
-    /* background-color: #e00707; */
 }
 
 .banner-divs * {
@@ -280,20 +284,17 @@ header .square-button.red {
 
 .spacer-div {
     width: 568px;
-    /* background-color: #027a97; */
 }
 
 .banner-content {
     display: flex;
     flex-flow: column;
-    row-gap: 96px;
-
+    row-gap: 96px !important;
     flex: 1;
     min-width: max-content;
     width: 100%;
     max-width: 49.85vw;
-    padding-left: 32px !important;
-    /* background-color: #6e7072; */
+    padding-left: 48px !important;
 }
 
 .banner-content-top {
@@ -307,7 +308,7 @@ header .square-button.red {
 .banner-content-top>div:last-child {
     display: flex;
     flex-flow: column;
-    row-gap: 23px;
+    row-gap: 24px;
 }
 
 .banner-content-top>.side-bars {
@@ -323,22 +324,16 @@ header .square-button.red {
     background-color: white;
 }
 
-.banner-content-top>.side-bars>div:not(:first-child) {
-    background-color: white;
-    opacity: 0.5;
-}
-
-.banner-content-top>div>h1 {
+.banner-content-top>div>h1{
     font-family: "Poppins-bold" !important;
     font-size: 48px;
     line-height: 56px;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.4px;
     font-weight: 500;
     color: white;
     margin-top: 8px;
     width: 100%;
     max-width: 500px;
-    /* background-color: #027a97; */
 }
 
 .banner-content-top>div p {
@@ -352,21 +347,23 @@ header .square-button.red {
 .banner-content-top .square-button.red {
     display: flex;
     column-gap: 8px;
-    padding: 12px 32px;
+    padding: 11px 32px;
 }
 
 .banner-content-bottom {
     display: flex;
     flex-flow: column;
     color: white;
+    margin-left: 1px;
+    min-width: max-content;
 }
 
-.banner-content-bottom h1 {
+.banner-content-bottom h1,.banner-content-bottom p>b {
     font-family: "Open Sans-bold" !important;
     font-size: 14px;
     line-height: 20px;
     letter-spacing: normal;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 .banner-content-bottom p {
@@ -511,7 +508,7 @@ main .activities img {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
-    font-weight: 500;
+    font-weight: 400;
     cursor: pointer;
 }
 
@@ -789,9 +786,72 @@ footer>div>p>img:last-child{
         grid-template-columns: repeat(2, 1fr);
         max-width: 100%;
     }
+
+    .banner-content{
+        padding-left: 39px !important;
+    }
+}
+
+@media screen and (max-width:749px) {
+    .search-bar{
+        display: none;
+    }
+
+    header{
+        z-index: 11;
+        background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.536), transparent,transparent,transparent);
+    }
+    
+    .search-bar-small{
+        display: flex;
+        flex-flow: column;
+        row-gap: 12px;
+        margin-left: 112px !important;
+        z-index: 11;
+        max-width: max-content;
+    }
+
+    .search-bar-small>div{
+        background-color: white;
+        width: 308px;
+        height: 48px;
+        display: flex;
+        column-gap: 1px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 4px;
+        overflow: hidden;
+        padding: 0 0 0 18px;
+        box-sizing: border-box;
+    }
+
+    .search-bar-small>div>input{
+        border: none;
+        border-color: white;
+        margin-top: -2px;
+    }
+
+    .search-bar-small input:not(:first-child) {
+        border-left: none;
+    }
+
+    footer>div>p{
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 @media screen and (max-width:600px) {
+    main{
+        padding: 0 24px;
+    }
+
+    main>h1:first-child{
+        font-size: 24px;
+        line-height: 32px;
+        font-weight: 400;
+    }
+
     main .activities {
         grid-template-columns: repeat(1, 1fr);
         max-width: 100%;
@@ -801,13 +861,41 @@ footer>div>p>img:last-child{
         height: min-content;
     }
 
-    .banner-divs{
-        column-gap: 0;
+    .banner-content{
+        padding-left: 31px !important;
     }
 
     .spacer-div{
-        width: 100%;
-        min-width: 30px;
+        display: none;
     }
 
+    .banner-divs{
+        min-width: 100%;
+    }
+
+    .banner-content{
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    
+.banner-content-top>div>h1 {
+    min-width: 0px;
+    padding-right: 20px;
+}
+
+
+
+}
+
+@media screen and (max-width:330px) {
+
+    .banner-content-top>div{
+        margin-right: 20px;
+    }
+
+    .banner-content-top .square-button.red{
+        min-width: max-content;
+    }
+    
 }
